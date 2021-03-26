@@ -74,6 +74,8 @@
 body {
     font: 400 19px/1  'Raleway' ,Arial, tahoma, verdana, sans-serif;
 }
+
+
 a{
     text-decoration: none;
 }
@@ -83,6 +85,7 @@ ul {
 
 img {
     max-width: 100%;
+    background-size: cover;
 }
 table {
     border-collapse: collapse;
@@ -96,4 +99,134 @@ input {
     max-width: 1160px;
     padding: 0 15px;
     margin: auto;
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.header  {
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    
+}
+.header__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-height: 100px;
+    position: absolute;
+    
+}
+
+.logo {
+    display: inline-block;
+    padding: 5px 5px;
+}
+.menu a {
+    color: #00c0ff;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+    margin: 5px;        
+}
+
+li {
+    padding-right: 55px;
+}
+
+.main {
+    background-image: url(../image/banner.jpg) ;
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 300px 0 160px ;
+
+}
+
+.main .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.button-wrapper {
+    padding: 25px; 
+}
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+    background: rgb(241, 248, 248);
+    padding: 8px 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.mobile-button {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-button span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #00c0ff;
+    z-index: 5;
+}
+
+.mobile-button::before,
+.mobile-button::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    background: #00c0ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+.mobile-button::after {
+    top: auto;
+    bottom: 0;
+}
+
+@media (max-width: 800px) {
+    .mobile-button {
+        display: inline-flex;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .header {
+        top: 0;
+        padding: 8px 15px;
+    }
+
+   
 }
