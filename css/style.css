@@ -94,54 +94,43 @@ table {
 input {
     overflow: hidden;
 }
+.wrapper {
+    overflow: hidden;
+}
 
 .container {
     max-width: 1160px;
     padding: 0 15px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-.wrapper {
-    overflow: hidden;
-    position: relative;
+.header .container {
+    max-width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header  {
+.header {
+    background-color: #000;
     width: 100%;
-    background-color: black;
-    overflow: hidden;
     position: absolute;
     top: 40px;
-    
+    left: 0px;
 }
-.header__item {
+
+.navigation {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 56px;
+}
+.navigation__item {
+    margin: 0 42px;
 }
 
-.logo img {
-    max-height: 100px;
-    position: absolute;
-    
-}
-
-.logo {
-    display: inline-block;
-    padding: 5px 5px;
-}
-.menu a {
+.navigation a {
     color: #00c0ff;
-}
-
-ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 5px;
-    margin: 5px;        
-}
-
-li {
-    padding-right: 55px;
 }
 
 .main {
@@ -151,7 +140,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 300px 0 160px ;
+    padding: 380px 0 160px ;
 
 }
 
@@ -164,20 +153,30 @@ li {
 
 }
 
+.info {
+    margin-bottom: 65px;
+}
 
+.info__item {
+    color: white;
+    text-align: center;
+    margin-bottom: 100px;
+}
 
 .button-wrapper {
     padding: 25px; 
 }
 
-.button {
-    display: inline-block;
-    margin: 10px;
-    vertical-align: top;
-    background: rgb(241, 248, 248);
-    padding: 8px 25px;
-    border-radius: 15px;
-    text-align: center;
+.main button {
+    width: 260px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Roboto, sans-serif;
+    color: #3ea2d8;
+    font-weight: bold;
+    cursor: pointer;
+    outline: 0;
 }
 
 .mobile-button {
@@ -195,6 +194,9 @@ li {
     width: 100%;
     background: #00c0ff;
     z-index: 5;
+    opacity: 1;
+    transition: .3s;
+
 }
 
 .mobile-button::before,
@@ -205,7 +207,8 @@ li {
     background: #00c0ff;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0%;
+    transition: 0.3s;
 
 }
 
@@ -214,6 +217,116 @@ li {
     bottom: 0;
 }
 
+.mobile-button.opened span {
+    opacity: 0;
+}
+
+.mobile-button.opened::before {
+    transform: rotate(45deg);
+    top: calc(50% - 2px);
+}
+
+.mobile-button.opened::after {
+    transform: rotate(-45deg);
+    bottom: calc(50% - 2px);
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.second .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.col-100 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 165px;
+    color: #00c0ff;
+}
+
+.text {
+    margin-top: 45px;
+    margin-bottom: 220px;
+    color: #00c0ff;
+}
+
+.third {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #1b1b1b;
+    
+}
+
+.box {
+    display: flex;
+    flex-direction: column; 
+}
+
+.col-31 {
+    padding-right: 100px;
+    padding-left: 165px;
+    padding-top: 135px;
+    padding-bottom: 120px;
+}
+
+.col-32 {
+    padding-right: 80px;
+    padding-top: 135px;
+    padding-bottom: 120px;
+}
+
+.col-33 {
+    padding-right: 175px;
+    padding-top: 135px;
+    padding-bottom: 120px;
+}
+
+
+h3 {
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.texts {
+    color: #c2c2c2;
+}
+
+@media (max-width: 1200px) {
+    .col-31 {
+        padding-right: 100px;
+        padding-left: 100px;
+        padding-top: 135px;
+        padding-bottom: 120px;
+    }
+    
+    .col-32 {
+        padding-right: 80px;
+        padding-top: 135px;
+        padding-bottom: 120px;
+    }
+    
+    .col-33 {
+        padding-right: 100px;
+        padding-top: 135px;
+        padding-bottom: 120px;
+    }
+}
+
+
 @media (max-width: 800px) {
     .mobile-button {
         display: inline-flex;
@@ -221,12 +334,57 @@ li {
 
     .navigation {
         display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: auto;
+        padding: 20px 15px;
+        text-align: center;
+        background: #000;;
     }
 
     .header {
         top: 0;
-        padding: 8px 15px;
+      
     }
 
+    .header .container{
+        padding: 8px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main {
+        padding: 100px 0 50px ;
+
+
+    }
+
+    .col-31 {
+        padding-right: 25px;
+        padding-left: 20px;
+        padding-top: 135px;
+        padding-bottom: 120px;
+    }
+    
+    .col-32 {
+        padding-right: 25px;
+        padding-top: 135px;
+        padding-bottom: 120px;
+    }
+    
+    .col-33 {
+        padding-right: 25px;
+        padding-top: 135px;
+        padding-bottom: 120px;
+    }
+
+   
+}
+
+
+@media (max-width: 480px) {
    
 }

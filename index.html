@@ -8,53 +8,101 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body >
+	
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
-				<div class="header__item">
-					<a href="/" class="logo">
-						<img src="image/logo.png" alt="site name">
-					</a>
-
-					
-						<span class="mobile-button">
-							<span></span>
-						</span>
-						<nav class="navigation">
-							<ul class="menu">
-								<li class="navigation">
-									<a href="#">HOME</a>
-								</li>
-								<li class="navigation">
-									<a href="#">ABOUT</a>
-								</li>
-								<li class="navigation">
-									<a href="#">SHOP</a>
-								</li>
-								<li class="navigation">
-									<a href="#">CONTACT</a>
-								</li>
-							</ul>
-						</nav>
-					
-				</div>
-			</div>
-			
+                <div class="logo">
+                    <img src="image/logo.png" alt="logo">
+                </div>
+                <nav>
+                  <span class="mobile-button">
+                     <span></span>
+                  </span>
+                    <ul class="navigation">
+                        <li>
+                            <a href="#" class="navigation__item">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navigation__item">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navigation__item">SHOP</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navigation__item">CONTACTS</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 		</header>
+
 		<section class="main">
 			<div class="container">
-					<img src="image/text.png" alt="text">
-						<p>
+					<div>
+						<img class="info" src="image/text.png" alt="text">
+					</div>
+						<p class="info__item">
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
 						</p>
-							<div class="button-wrapper">
-                        		<input type="submit" class="button" value="READ MORE">
-                    		</div>
+							<button type="submit">READ MORE</button>
 			</div>
 		</section>
 
+			<section class="second">
+				<div class="container">
+					<div class="col-100">
+						<h2>WHO ARE WE</h2>
+						<div class="text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="third">
+					<div class="box">
+						<div class="col-31">
+							<h3>WE USE LESS WATER</h3>
+								<div class="texts">
+									Lorem ipsum dolor sit amet, consecte
+									sectetur adipisicing elit, tation omne 
+									ullamco laboris nisi ut aliqolore.
+								</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="col-32">
+							<h3>WE RESPECT NATURE</h3>
+								<div class="texts">
+									Lorem ipsum dolor sit amet, consecte
+									sectetur adipisicing elit, tation omne 
+									ullamco laboris nisi ut aliqolore.
+								</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="col-33">
+							<h3>WE BELIEVE IN RECYCLING</h3>
+								<div class="texts">
+									Lorem ipsum dolor sit amet, consecte
+									sectetur adipisicing elit, tation omne 
+									ullamco laboris nisi ut aliqolore.
+								</div>
+						</div>
+					</div>
+			</section>
+		
+
 	</div>
+
+
+
 	
- 
+	<script src="./js/jquery.js"></script>
+	<script src="./js/scripts.js"></script>
+
 </body>
 </html>
